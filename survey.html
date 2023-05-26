@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color:white,rgb(230, 139, 100);
+            width:100%;
+            height:100%;
+            color:white;
+        }
+        .form{
+            color: black;
+        }
+        
+    </style>
+</head>
+<body class="body">
+    Name: <input id="name" type="text" value="" placeholder="Enter your name..."/>
+        <button onclick="greet()" style="background: rgb(164, 164, 149);">
+            Greet
+        </button>
+        <br/><br/>
+        
+    <form class="form">
+        <fieldset>
+            <legend> Survey </legend>
+        <div class="greet">
+        </div>
+        <br/>
+        <br/>
+        Pincode: <input type="number" placeholder=" Enter Pincode " required="" ></input>
+        <br/>
+        <br/>
+        Gender: <input type="radio" value="M" name="gender"/> Male
+        <input type="radio" value="F" name="gender"/> Female
+        <input type="radio" value="O" name="gender"/> Others
+        <br/><br/>
+        Country:
+        <select>
+            <option> Select your native country</option>
+            <optgroup label="Asia">
+                <option> India </option>
+                <option> Pakistan </option>
+                <option> Srilanka </option>
+                <option> Other </option>
+            </optgroup>
+            <option> U.S.A </option>
+            <option> Others </option>
+        </select>
+        <br/>
+        <br/>
+        Hobbies:
+        <input type="checkbox" name="hobbies[]"/> Cricket
+        <input type="checkbox" name="hobbies[]"/> Painting
+        <input type="checkbox" name="hobbies[]"/> Reading
+        <br/><br/>
+        1  ->  When was MS Dhoni born?
+            <input type="radio" vlaue="ans1" name="a"/> (a) 7 July 1981
+            <input type="radio" vlaue="ans2" name="a"/> (b) 1 Jan 1985
+            <input type="radio" vlaue="ans3" name="a"/> (c) 7 Dec 1989
+            <input type="radio" vlaue="ans4" name="a"/>(d) None of the above<br/><br/>
+        2 ->  Which of the following award is not won by MS Dhoni?
+        <input type="radio" vlaue="ans11" name="b"/>(a) Padma Shri
+        <input type="radio" vlaue="ans12" name="b"/>(b) Bharat Ratna
+        <input type="radio" vlaue="ans13" name="b"/> (c) Padma Bhushan
+        <input type="radio" vlaue="ans14" name="b"/>(d) Rajiv Gandhi Khel Ratna<br/><br/>
+        3  ->  How many centuries have been scored by the MS Dhoni in ODIs? 
+        <input type="radio" vlaue="ans21" name="c"/>(a) 10
+        <input type="radio" vlaue="ans22" name="c"/>(b) 15
+        <input type="radio" vlaue="ans23" name="c"/>(c) 18
+        <input type="radio" vlaue="ans24" name="c"/>(d) 22<br/><br/>
+        4  ->  When MS Dhoni made ODI Debut for the Indian team?
+
+        <input type="radio" vlaue="ans31" name="d"/>(a) 2000
+        <input type="radio" vlaue="ans32" name="d"/>(b) 2002
+        <input type="radio" vlaue="ans33" name="d"/>(c) 2008
+        <input type="radio" vlaue="ans34" name="d"/>(d) 2004<br/><br/>
+
+        5  ->  Which of the following tournament is won by the Indian team under the captaincy of Dhoni?
+
+        <input type="radio" vlaue="ans41" name="e"/> (a) India won the 2007 ICC World Twenty20
+        
+        <input type="radio" vlaue="ans42" name="e"/>(b) The Asia Cups in 2010 and 2016
+        
+        <input type="radio" vlaue="ans43" name="e"/>(c) ICC Cricket World Cup, 2011 and
+        
+        <input type="radio" vlaue="ans44" name="e"/>(d) ICC Champions Trophy 2017.
+        <br/><br/><br/>
+        <input type="Submit" style="background-color: rgb(196, 223, 227); padding: 10px; font-size:19px;"/>
+        <input type="reset" style="background-color: rgb(240, 206, 206); padding: 10px; font-size:19px;"/>
+        </fieldset>
+    </form>
+</body>
+<script type="text/javascript">
+    function greet(){
+        var name = document.getElementById('name').value;
+        var string="Hello " + name + " : please Complete this survey 👇";
+        document.getElementsByClassName('greet')[0].innerHTML = string;
+    }
+</script>
+</html>
